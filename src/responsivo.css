@@ -1,0 +1,155 @@
+/* ================= DISPOSITIVOS DESKTOP PEQUENOS / TABLETS VERTICAIS (Até 992px) ================= */
+@media (max-width: 992px) {
+    /* Sistema de busca se empilha */
+    .search-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px;
+    }
+    
+    .search-bar-section {
+        margin-top: -20px;
+        padding: 0 12px;
+    }
+
+    /* Grids adaptáveis para uma única coluna */
+    .about-grid, 
+    .detail-grid, 
+    .features-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-img-box {
+        height: 380px;
+    }
+
+    .about-experience-badge {
+        bottom: 16px;
+        right: 16px;
+        padding: 16px;
+    }
+
+    /* Ajuste de Tipografia Pesada */
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .detail-header h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Menu de Navegação em Mobile (Sistema Off-canvas simplificado) */
+    .mobile-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Carrossel de Imagens em telas menores */
+    .carousel-container {
+        height: 350px;
+    }
+}
+
+/* ================= SMARTPHONES (Até 768px) ================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-section {
+        padding: 120px 0 80px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .properties-section, 
+    .about-section, 
+    .features-section, 
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .section-header h2,
+    .about-info h2,
+    .cta-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+        padding: 32px 16px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+}
+
+/* ================= TELAS ULTRA REDUZIDAS (Até 480px) ================= */
+@media (max-width: 480px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-container {
+        height: 240px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .carousel-btn.prev { left: 12px; }
+    .carousel-btn.next { right: 12px; }
+}

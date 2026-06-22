@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Gomes | Consultoria Imobiliária Premium</title>
+    <meta name="description"
+        content="Seleção exclusiva de imóveis de alto padrão. Encontre o imóvel ideal para viver ou investir com segurança e discrição.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/responsivo.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="btn-brand">GABRIEL GOMES<span>.</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#imoveis" class="nav-link">Imóveis</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+
+        <div id="view-home">
+            <section id="home" class="hero-section">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <span class="badge">Consultoria Imobiliária de Alto Padrão</span>
+                    <h1>Encontre o imóvel ideal para viver ou investir com segurança</h1>
+                    <p>Seleção exclusiva de empreendimentos cuidadosamente escolhidos para atender perfis altamente
+                        exigentes.</p>
+                    <div class="hero-actions">
+                        <a href="#imoveis" class="btn btn-accent">Ver Imóveis Disponíveis</a>
+                        <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-outline-white">Falar com o
+                            Consultor</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="search-bar-section">
+                <div class="container">
+                    <div class="search-wrapper">
+                        <div class="search-field">
+                            <label><i class="fa-solid fa-location-dot"></i> Bairro</label>
+                            <select id="filter-bairro">
+                                <option value="">Todos os bairros</option>
+                                <option value="Umarizal">Umarizal</option>
+                                <option value="Nazaré">Nazaré</option>
+                                <option value="Batista Campos">Batista Campos</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label><i class="fa-solid fa-building"></i> Tipo</label>
+                            <select id="filter-tipo">
+                                <option value="">Todos os tipos</option>
+                                <option value="Apartamento">Apartamento</option>
+                                <option value="Cobertura">Cobertura</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label><i class="fa-solid fa-bed"></i> Quartos</label>
+                            <select id="filter-quartos">
+                                <option value="">Qualquer quantidade</option>
+                                <option value="3">3 Quartos</option>
+                                <option value="4">4+ Quartos</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="btn-search">Encontrar Oportunidades</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="imoveis" class="properties-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Portfólio em Destaque</h2>
+                        <p>Curadoria exclusiva de lançamentos e prontos nas melhores localizações</p>
+                    </div>
+                    <div class="properties-grid" id="properties-grid">
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre" class="about-section">
+                <div class="container about-grid">
+                    <div class="about-img-box">
+                        <div class="about-experience-badge">
+                            <h3>10+</h3>
+                            <p>Anos de Mercado</p>
+                        </div>
+                        <div class="placeholder-img"></div>
+                    </div>
+                    <div class="about-info">
+                        <span class="sub-title">Atendimento Exclusivo</span>
+                        <h2>Gabriel Gomes</h2>
+                        <p class="lead">Meu compromisso é ajudar você a encontrar oportunidades imobiliárias alinhadas
+                            aos seus objetivos, oferecendo atendimento personalizado do início ao fechamento do negócio.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <h4>+150</h4>
+                                <p>Clientes Atendidos</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>98%</h4>
+                                <p>Taxa de Satisfação</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>R$ 80M+</h4>
+                                <p>Em Volume Negociado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="diferenciais" class="features-section">
+                <div class="container">
+                    <div class="section-header center">
+                        <h2>Por que escolher uma assessoria exclusiva?</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <h3>Atendimento Personalizado</h3>
+                            <p>Cada investidor ou família possui um canal de atendimento sob medida, garantindo total
+                                discrição e foco no seu tempo.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-gem"></i>
+                            <h3>Curadoria Criteriosa</h3>
+                            <p>Não oferecemos listas genéricas. Filtramos exaustivamente as opções para trazer apenas o
+                                topo do mercado.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>Segurança Jurídica</h3>
+                            <p>Análise preventiva completa de certidões e contratos para assegurar uma transação sem
+                                riscos futuros.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials-section">
+                <div class="container">
+                    <div class="section-header center">
+                        <h2>O que dizem os clientes</h2>
+                    </div>
+                    <div class="testimonials-container">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p>"Atendimento impecável do Gabriel. Identificou nosso perfil de imediato e apresentou a
+                                melhor cobertura de forma rápida e transparente."</p>
+                            <h4>Dr. Marcos Rocha</h4>
+                            <span>Investidor e Médico</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-final">
+                <div class="container cta-box">
+                    <h2>Seu próximo patrimônio está a um clique de distância.</h2>
+                    <p>Receba orientação estratégica de quem entende o mercado de alta renda de ponta a ponta.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-accent"><i
+                                class="fa-brands fa-whatsapp"></i> Agendar Reunião Estratégica</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-details" class="hidden">
+            <section class="property-detail-page">
+                <div class="container">
+                    <button class="btn btn-outline" id="btn-back-home" style="margin-bottom: 32px;">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para os Imóveis
+                    </button>
+
+                    <div class="detail-header">
+                        <div>
+                            <span class="badge" id="detail-status">Status</span>
+                            <h1 id="detail-title">Nome do Empreendimento</h1>
+                            <p class="location" id="detail-location"><i class="fa-solid fa-location-dot"></i>
+                                Localização</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="carousel-track">
+                        </div>
+                        <button class="carousel-btn prev" id="carousel-prev"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" id="carousel-next"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="carousel-dots" id="carousel-dots"></div>
+                    </div>
+
+                    <div class="detail-grid">
+                        <div class="detail-main-content">
+                            <div class="detail-block">
+                                <h3>Sobre o Projeto</h3>
+                                <p id="detail-description">Descrição...</p>
+                            </div>
+
+                            <div class="detail-block">
+                                <h3>Diferenciais e Infraestrutura</h3>
+                                <ul class="benefits-list" id="detail-benefits">
+                                </ul>
+                            </div>
+
+                            <div class="detail-block">
+                                <h3>Localização Privilegiada</h3>
+                                <div class="map-placeholder">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    <p>Mapa de zoneamento e proximidades protegido por sigilo de curadoria. Detalhes
+                                        compartilhados via atendimento privado.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="detail-sidebar">
+                            <div class="lead-widget">
+                                <h3>Agendar Visita Exclusiva</h3>
+                                <p>Insira seus dados para falar diretamente com Gabriel Gomes via atendimento
+                                    prioritário.</p>
+
+                                <form id="lead-form">
+                                    <div class="form-group">
+                                        <label for="lead-name">Nome Completo</label>
+                                        <input type="text" id="lead-name" placeholder="Ex: Dr. Roberto Silva" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lead-phone">WhatsApp</label>
+                                        <input type="tel" id="lead-phone" placeholder="Ex: (91) 99999-9999" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-accent" style="width: 100%;">
+                                        <i class="fa-brands fa-whatsapp"></i> Solicitar Atendimento
+                                    </button>
+                                </form>
+
+                                <div class="scarcity-notice">
+                                    <i class="fa-solid fa-circle-info"></i> Alta procura nesta região. Resposta em até
+                                    15 minutos.
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>GABRIEL GOMES</h3>
+                <p>Consultoria imobiliária personalizada com foco em transparência, discrição e alta rentabilidade.</p>
+                <span class="creci">CRECI: 12345-F / PA</span>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#imoveis">Imóveis</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato Direto</h4>
+                <p><i class="fa-solid fa-phone"></i> (91) 99999-9999</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@gabrielgomesimoveis.com.br</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gabriel Gomes. Todos os direitos reservados. Design Exclusivo.</p>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
