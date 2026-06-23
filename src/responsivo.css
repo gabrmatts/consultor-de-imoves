@@ -1,155 +1,72 @@
-/* ================= DISPOSITIVOS DESKTOP PEQUENOS / TABLETS VERTICAIS (Até 992px) ================= */
-@media (max-width: 992px) {
-    /* Sistema de busca se empilha */
-    .search-wrapper {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 24px;
-    }
-    
-    .search-bar-section {
-        margin-top: -20px;
-        padding: 0 12px;
-    }
-
-    /* Grids adaptáveis para uma única coluna */
-    .about-grid, 
-    .detail-grid, 
-    .features-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 1200px) {
+    .about-grid, .detail-grid, .footer-grid {
         gap: 40px;
     }
+}
 
+@media (max-width: 1024px) {
+    .search-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    #btn-search {
+        grid-column: span 2;
+    }
+    .about-grid, .detail-grid {
+        grid-template-columns: 1fr;
+    }
     .about-img-box {
-        height: 380px;
+        height: 440px;
     }
-
-    .about-experience-badge {
-        bottom: 16px;
-        right: 16px;
-        padding: 16px;
+    .lead-widget {
+        position: static;
+        margin-top: 16px;
     }
+}
 
-    /* Ajuste de Tipografia Pesada */
-    .hero-content h1 {
-        font-size: 2.4rem;
-    }
-
-    .detail-header h1 {
-        font-size: 2.2rem;
-    }
-
-    /* Menu de Navegação em Mobile (Sistema Off-canvas simplificado) */
-    .mobile-toggle {
-        display: block;
-        z-index: 1001;
-    }
-
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    
+    .header-container { height: 74px; }
+    
+    .mobile-toggle { display: block; }
+    
     .nav-menu {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background-color: var(--white);
-        flex-direction: column;
-        justify-content: center;
-        gap: 24px;
-        padding: 40px;
-        box-shadow: var(--shadow-lg);
-        transition: var(--transition);
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-link {
-        font-size: 1.1rem;
+        top: 74px;
+        left: -100%;
         width: 100%;
-        text-align: center;
+        height: calc(100vh - 74px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 28px;
+        transition: var(--transition);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        align-items: flex-start;
     }
     
-    /* Carrossel de Imagens em telas menores */
-    .carousel-container {
-        height: 350px;
-    }
-}
-
-/* ================= SMARTPHONES (Até 768px) ================= */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 16px;
-    }
-
-    .hero-section {
-        padding: 120px 0 80px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .properties-section, 
-    .about-section, 
-    .features-section, 
-    .testimonials-section {
-        padding: 60px 0;
-    }
-
-    .section-header h2,
-    .about-info h2,
-    .cta-box h2 {
-        font-size: 1.8rem;
-    }
-
-    .stats-grid {
+    .nav-menu.active { left: 0; }
+    
+    .hero-content h1 { font-size: 2.4rem; }
+    .hero-content p { font-size: 1rem; }
+    .hero-actions { flex-direction: column; }
+    
+    .search-wrapper {
         grid-template-columns: 1fr;
-        gap: 24px;
-        text-align: center;
+        padding: 20px;
     }
-
-    .benefits-list {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-box {
-        padding: 32px 16px;
-    }
-
-    .feature-card {
-        padding: 24px;
-    }
-}
-
-/* ================= TELAS ULTRA REDUZIDAS (Até 480px) ================= */
-@media (max-width: 480px) {
+    #btn-search { grid-column: span 1; }
+    
     .properties-grid {
         grid-template-columns: 1fr;
     }
     
-    .carousel-container {
-        height: 240px;
-    }
-
-    .carousel-btn {
-        width: 36px;
-        height: 36px;
+    .benefits-list {
+        grid-template-columns: 1fr;
     }
     
-    .carousel-btn.prev { left: 12px; }
-    .carousel-btn.next { right: 12px; }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
 }

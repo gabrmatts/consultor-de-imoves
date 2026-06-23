@@ -1,35 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Gomes | Consultoria Imobiliária Premium</title>
-    <meta name="description"
-        content="Seleção exclusiva de imóveis de alto padrão. Encontre o imóvel ideal para viver ou investir com segurança e discrição.">
-
+    <title>Neto Consultor de Imóveis | Palmas TO</title>
+    <meta name="description" content="Consultoria imobiliária especializada nos principais empreendimentos de Palmas - TO. Atendimento personalizado para compra e investimento." />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <!-- Correção do parâmetro de query da URL do Google Fonts (?family= em vez de =family=) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="src/responsivo.css">
-</head>
 
+    <!-- Otimizações de UI/UX Premium (Mantendo a compatibilidade com a versão original) -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Micro-interações e Suavidade em Botões e Links */
+        .btn, .nav-link, .channel-card, select, input {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Aperfeiçoamento do Efeito Glassmorphic (Estilo Startups de Alto Padrão) */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.75) !important;
+            backdrop-filter: blur(16px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04) !important;
+        }
+
+        /* Estilização Avançada do WhatsApp Flutuante */
+        .whatsapp-float-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+        }
+
+        .whatsapp-float-btn {
+            background-color: #25D366;
+            color: #FFFFFF !important;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Efeito Ondulação/Pulso Radar */
+        .whatsapp-float-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #25D366;
+            border-radius: 50%;
+            opacity: 0.4;
+            z-index: -1;
+            animation: whatsappRadar 2s infinite;
+        }
+
+        .whatsapp-float-btn:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 12px 38px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            background: #111111;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            margin-right: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .whatsapp-float-container:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        @keyframes whatsappRadar {
+            0% { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+
+        /* Ajuste responsivo do botão para telas menores */
+        @media (max-width: 768px) {
+            .whatsapp-float-container {
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float-btn {
+                width: 52px;
+                height: 52px;
+                font-size: 24px;
+            }
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
 <body>
 
     <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo" id="btn-brand">GABRIEL GOMES<span>.</span></a>
+            <a href="#" class="logo-container" id="brand-logo">
+                <img src="assets/img/logo.png" alt="Neto Consultor de Imóveis" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                <span id="logo-text" class="logo-text" style="display: none;">NETO <span>CONSULTOR</span></span>
+            </a>
+            
             <nav class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Início</a>
-                <a href="#imoveis" class="nav-link">Imóveis</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#diferenciais" class="nav-link">Diferenciais</a>
-                <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+                <a href="#imoveis" class="nav-link">Empreendimentos</a>
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+                <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="btn btn-primary">Falar com Especialista</a>
             </nav>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
                 <i class="fa-solid fa-bars"></i>
@@ -38,52 +162,51 @@
     </header>
 
     <main style="margin-top: 80px;">
-
+        
         <div id="view-home">
             <section id="home" class="hero-section">
                 <div class="hero-overlay"></div>
                 <div class="container hero-content">
-                    <span class="badge">Consultoria Imobiliária de Alto Padrão</span>
-                    <h1>Encontre o imóvel ideal para viver ou investir com segurança</h1>
-                    <p>Seleção exclusiva de empreendimentos cuidadosamente escolhidos para atender perfis altamente
-                        exigentes.</p>
+                    <span class="badge"><i class="fa-solid fa-gem"></i> Melhores empreendimentos de Palmas</span>
+                    <h1>Encontre seu imóvel ideal em Palmas.</h1>
+                    <p>Especialista nos principais empreendimentos imobiliários de Palmas - TO, ajudando você a encontrar oportunidades para morar ou investir com total segurança jurídica e discrição.</p>
                     <div class="hero-actions">
-                        <a href="#imoveis" class="btn btn-accent">Ver Imóveis Disponíveis</a>
-                        <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-outline-white">Falar com o
-                            Consultor</a>
+                        <a href="#imoveis" class="btn btn-accent">Ver Empreendimentos</a>
+                        <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="btn btn-outline-white">Falar com Especialista</a>
                     </div>
                 </div>
             </section>
 
             <section class="search-bar-section">
                 <div class="container">
-                    <div class="search-wrapper">
+                    <div class="search-wrapper glass-effect">
                         <div class="search-field">
-                            <label><i class="fa-solid fa-location-dot"></i> Bairro</label>
-                            <select id="filter-bairro">
-                                <option value="">Todos os bairros</option>
-                                <option value="Umarizal">Umarizal</option>
-                                <option value="Nazaré">Nazaré</option>
-                                <option value="Batista Campos">Batista Campos</option>
+                            <label><i class="fa-solid fa-location-dot"></i> Região / Localização</label>
+                            <select id="filter-localizacao">
+                                <option value="">Todas as regiões</option>
+                                <option value="Região Sul">Região Sul de Palmas</option>
+                                <option value="Orla">Orla de Palmas</option>
+                                <option value="Plano Diretor">Plano Diretor Central</option>
                             </select>
                         </div>
                         <div class="search-field">
-                            <label><i class="fa-solid fa-building"></i> Tipo</label>
-                            <select id="filter-tipo">
-                                <option value="">Todos os tipos</option>
-                                <option value="Apartamento">Apartamento</option>
-                                <option value="Cobertura">Cobertura</option>
+                            <label><i class="fa-solid fa-hourglass-start"></i> Status da Obra</label>
+                            <select id="filter-status">
+                                <option value="">Todos os status</option>
+                                <option value="Lançamento">Lançamento</option>
+                                <option value="Em Obras">Em Obras</option>
+                                <option value="Pronto">Pronto para Morar</option>
                             </select>
                         </div>
                         <div class="search-field">
-                            <label><i class="fa-solid fa-bed"></i> Quartos</label>
+                            <label><i class="fa-solid fa-bed"></i> Dormitórios</label>
                             <select id="filter-quartos">
                                 <option value="">Qualquer quantidade</option>
                                 <option value="3">3 Quartos</option>
                                 <option value="4">4+ Quartos</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary" id="btn-search">Encontrar Oportunidades</button>
+                        <button class="btn btn-primary" id="btn-search">Filtrar Oportunidades</button>
                     </div>
                 </div>
             </section>
@@ -91,11 +214,10 @@
             <section id="imoveis" class="properties-section">
                 <div class="container">
                     <div class="section-header">
-                        <h2>Portfólio em Destaque</h2>
-                        <p>Curadoria exclusiva de lançamentos e prontos nas melhores localizações</p>
+                        <h2>Vitrine de Lançamentos exclusivos</h2>
+                        <p>A mais seleta curadoria de imóveis de alto padrão e condomínios em Palmas - Tocantins.</p>
                     </div>
-                    <div class="properties-grid" id="properties-grid">
-                    </div>
+                    <div class="properties-grid" id="properties-grid"></div>
                 </div>
             </section>
 
@@ -103,92 +225,33 @@
                 <div class="container about-grid">
                     <div class="about-img-box">
                         <div class="about-experience-badge">
-                            <h3>10+</h3>
-                            <p>Anos de Mercado</p>
+                            <h3>CRECI</h3>
+                            <p>0000-F/TO</p>
                         </div>
                         <div class="placeholder-img"></div>
                     </div>
                     <div class="about-info">
-                        <span class="sub-title">Atendimento Exclusivo</span>
-                        <h2>Gabriel Gomes</h2>
-                        <p class="lead">Meu compromisso é ajudar você a encontrar oportunidades imobiliárias alinhadas
-                            aos seus objetivos, oferecendo atendimento personalizado do início ao fechamento do negócio.
-                        </p>
-
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <h4>+150</h4>
-                                <p>Clientes Atendidos</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>98%</h4>
-                                <p>Taxa de Satisfação</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>R$ 80M+</h4>
-                                <p>Em Volume Negociado</p>
-                            </div>
+                        <span class="sub-title">Consultoria Exclusiva</span>
+                        <h2>Neto Consultor de Imóveis</h2>
+                        <p class="lead">Auxilio famílias e investidores a encontrarem as melhores oportunidades imobiliárias em Palmas - TO, oferecendo atendimento personalizado, transparência e acompanhamento em todas as etapas da negociação.</p>
+                        
+                        <div class="social-channels">
+                            <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="channel-card"><i class="fa-brands fa-whatsapp"></i> Contato Direto</a>
+                            <a href="https://www.instagram.com/neto.corretormrv.palmas?igsh=MXcwZ2Rjb3lrbmU0cQ%3D%3D" target="_blank" class="channel-card"><i class="fa-brands fa-instagram"></i> Siga no Instagram</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="diferenciais" class="features-section">
+            <section class="cta-final-section">
                 <div class="container">
-                    <div class="section-header center">
-                        <h2>Por que escolher uma assessoria exclusiva?</h2>
-                    </div>
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <i class="fa-solid fa-user-tie"></i>
-                            <h3>Atendimento Personalizado</h3>
-                            <p>Cada investidor ou família possui um canal de atendimento sob medida, garantindo total
-                                discrição e foco no seu tempo.</p>
+                    <div class="cta-box-premium text-center">
+                        <h2>Pronto para conhecer seu próximo imóvel?</h2>
+                        <p>Receba atendimento personalizado e descubra os melhores empreendimentos de Palmas.</p>
+                        <div class="cta-buttons">
+                            <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="btn btn-accent">Agendar Atendimento</a>
+                            <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="btn btn-outline-white"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
                         </div>
-                        <div class="feature-card">
-                            <i class="fa-solid fa-gem"></i>
-                            <h3>Curadoria Criteriosa</h3>
-                            <p>Não oferecemos listas genéricas. Filtramos exaustivamente as opções para trazer apenas o
-                                topo do mercado.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <h3>Segurança Jurídica</h3>
-                            <p>Análise preventiva completa de certidões e contratos para assegurar uma transação sem
-                                riscos futuros.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="testimonials-section">
-                <div class="container">
-                    <div class="section-header center">
-                        <h2>O que dizem os clientes</h2>
-                    </div>
-                    <div class="testimonials-container">
-                        <div class="testimonial-card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i>
-                            </div>
-                            <p>"Atendimento impecável do Gabriel. Identificou nosso perfil de imediato e apresentou a
-                                melhor cobertura de forma rápida e transparente."</p>
-                            <h4>Dr. Marcos Rocha</h4>
-                            <span>Investidor e Médico</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="cta-final">
-                <div class="container cta-box">
-                    <h2>Seu próximo patrimônio está a um clique de distância.</h2>
-                    <p>Receba orientação estratégica de quem entende o mercado de alta renda de ponta a ponta.</p>
-                    <div class="cta-buttons">
-                        <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-accent"><i
-                                class="fa-brands fa-whatsapp"></i> Agendar Reunião Estratégica</a>
                     </div>
                 </div>
             </section>
@@ -198,115 +261,118 @@
             <section class="property-detail-page">
                 <div class="container">
                     <button class="btn btn-outline" id="btn-back-home" style="margin-bottom: 32px;">
-                        <i class="fa-solid fa-arrow-left"></i> Voltar para os Imóveis
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para os Empreendimentos
                     </button>
 
                     <div class="detail-header">
                         <div>
                             <span class="badge" id="detail-status">Status</span>
                             <h1 id="detail-title">Nome do Empreendimento</h1>
-                            <p class="location" id="detail-location"><i class="fa-solid fa-location-dot"></i>
-                                Localização</p>
+                            <p class="location" id="detail-location"><i class="fa-solid fa-location-dot"></i> Localização</p>
                         </div>
                     </div>
 
-                    <div class="carousel-container">
-                        <div class="carousel-track" id="carousel-track">
+                    <div class="carousel-container-premium">
+                        <div class="main-slider-wrapper">
+                            <div class="carousel-track" id="carousel-track"></div>
+                            <button class="carousel-nav-btn prev" id="carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="carousel-nav-btn next" id="carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
-                        <button class="carousel-btn prev" id="carousel-prev"><i
-                                class="fa-solid fa-chevron-left"></i></button>
-                        <button class="carousel-btn next" id="carousel-next"><i
-                                class="fa-solid fa-chevron-right"></i></button>
-                        <div class="carousel-dots" id="carousel-dots"></div>
+                        <div class="carousel-thumbnails" id="carousel-thumbnails"></div>
                     </div>
 
                     <div class="detail-grid">
                         <div class="detail-main-content">
                             <div class="detail-block">
                                 <h3>Sobre o Projeto</h3>
-                                <p id="detail-description">Descrição...</p>
+                                <p id="detail-description" class="property-desc-text">Descrição...</p>
                             </div>
 
                             <div class="detail-block">
-                                <h3>Diferenciais e Infraestrutura</h3>
-                                <ul class="benefits-list" id="detail-benefits">
-                                </ul>
+                                <h3>Características do Empreendimento</h3>
+                                <ul class="benefits-list" id="detail-benefits"></ul>
                             </div>
 
                             <div class="detail-block">
-                                <h3>Localização Privilegiada</h3>
+                                <h3>Localização Estratégica</h3>
                                 <div class="map-placeholder">
                                     <i class="fa-solid fa-map-location-dot"></i>
-                                    <p>Mapa de zoneamento e proximidades protegido por sigilo de curadoria. Detalhes
-                                        compartilhados via atendimento privado.</p>
+                                    <p>Mapa de zoneamento e plantas executivas sob consulta. Fale com Neto Consultor para receber o book técnico completo.</p>
                                 </div>
                             </div>
                         </div>
 
                         <aside class="detail-sidebar">
-                            <div class="lead-widget">
+                            <div class="lead-widget glass-effect">
                                 <h3>Agendar Visita Exclusiva</h3>
-                                <p>Insira seus dados para falar diretamente com Gabriel Gomes via atendimento
-                                    prioritário.</p>
-
+                                <p>Solicite atendimento prioritário e receba informações detalhadas via WhatsApp.</p>
+                                
                                 <form id="lead-form">
                                     <div class="form-group">
                                         <label for="lead-name">Nome Completo</label>
-                                        <input type="text" id="lead-name" placeholder="Ex: Dr. Roberto Silva" required>
+                                        <input type="text" id="lead-name" placeholder="Ex: Roberto Silva" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="lead-phone">WhatsApp</label>
-                                        <input type="tel" id="lead-phone" placeholder="Ex: (91) 99999-9999" required>
+                                        <input type="tel" id="lead-phone" placeholder="Ex: (63) 99999-9999" required>
                                     </div>
                                     <button type="submit" class="btn btn-accent" style="width: 100%;">
                                         <i class="fa-brands fa-whatsapp"></i> Solicitar Atendimento
                                     </button>
                                 </form>
-
-                                <div class="scarcity-notice">
-                                    <i class="fa-solid fa-circle-info"></i> Alta procura nesta região. Resposta em até
-                                    15 minutos.
-                                </div>
+                                <span class="response-tag"><i class="fa-solid fa-bolt"></i> Atendimento imediato de Palmas</span>
                             </div>
                         </aside>
                     </div>
                 </div>
             </section>
         </div>
-
     </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Zoom Imóvel">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Elemento do WhatsApp Flutuante com Tooltip Dinâmico -->
+    <div class="whatsapp-float-container">
+        <div class="whatsapp-tooltip">Falar com Neto Consultor</div>
+        <a href="https://wa.me/5563999911234?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis.%20%F0%9F%8F%A1" target="_blank" class="whatsapp-float-btn" aria-label="Chamar no WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <h3>GABRIEL GOMES</h3>
-                <p>Consultoria imobiliária personalizada com foco em transparência, discrição e alta rentabilidade.</p>
-                <span class="creci">CRECI: 12345-F / PA</span>
+                <h3>NETO CONSULTOR</h3>
+                <p>Consultoria imobiliária focada em alta performance patrimonial nos principais bairros e na promissora Região Sul de Palmas - Tocantins.</p>
+                <span class="creci">CRECI: 0000-F / TO</span>
             </div>
             <div class="footer-links">
-                <h4>Navegação</h4>
+                <h4>Atalhos</h4>
                 <ul>
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#imoveis">Imóveis</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#imoveis">Empreendimentos</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>Contato Direto</h4>
-                <p><i class="fa-solid fa-phone"></i> (91) 99999-9999</p>
-                <p><i class="fa-solid fa-envelope"></i> contato@gabrielgomesimoveis.com.br</p>
+                <h4>Atendimento Direto</h4>
+                <p><i class="fa-solid fa-phone"></i> (63) 99999-9999</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@netoconsultorpalmas.com.br</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Gabriel Gomes. Todos os direitos reservados. Design Exclusivo.</p>
+            <p>&copy; 2026 Neto Consultor de Imóveis. Todos os direitos reservados. Design Incorporadora Premium.</p>
         </div>
     </footer>
 
     <script src="src/script.js"></script>
 </body>
-
 </html>
